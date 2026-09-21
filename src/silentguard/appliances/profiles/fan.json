@@ -1,0 +1,9 @@
+{
+  "device": "fan",
+  "display_name": "Ceiling fan",
+  "protocol": "NEC",
+  "commands": {
+    "ON": {"code_id": "FAN_NEC_ON", "description": "Turn the fan on"},
+    "OFF": {"code_id": "FAN_NEC_OFF", "description": "Turn the fan off"}
+  }
+}

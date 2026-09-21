@@ -1,0 +1,13 @@
+flowchart TD
+    A[Fall Suspected]
+    B[Check Confidence]
+    C[Check Posture]
+    D[Check Inactivity]
+    E[Confirmation Window]
+    F{User Cancels?}
+    G[Emergency]
+    H[Safe State]
+
+    A --> B --> C --> D --> E --> F
+    F -- YES --> H
+    F -- NO --> G

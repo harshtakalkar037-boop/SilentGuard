@@ -1,0 +1,5 @@
+"""Configuration loading for SilentGuard."""
+
+from .loader import Config, load_config
+
+__all__ = ["Config", "load_config"]

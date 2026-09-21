@@ -1,0 +1,74 @@
+# SilentGuard central configuration.
+# Every tunable threshold lives here. Nothing is hardcoded in the modules.
+
+debug: false
+
+perception:
+  # Pose source: "mediapipe" (real camera/video) or "synthetic" (scripted, offline).
+  source: synthetic
+  # Minimum landmark visibility (0-1) before a keypoint is trusted.
+  min_visibility: 0.5
+  # Sliding window (seconds) used for temporal motion analysis.
+  history_seconds: 4.0
+
+fall_detection:
+  # Normalised image units per second. Hip centroid falling faster than this
+  # counts as "rapid downward motion".
+  downward_velocity: 0.30
+  # Torso angle from vertical (degrees) above which the body is "not upright".
+  posture_change_degrees: 45.0
+  # Bounding-box width/height ratio above which the body reads as horizontal.
+  horizontal_ratio: 1.10
+  # Mean landmark displacement per second below which the subject is "still".
+  stillness_threshold: 0.020
+  # Seconds of continuous stillness required to count as sustained inactivity.
+  inactivity_seconds: 3.0
+  # Rapid-descent evidence expires after this many seconds.
+  descent_memory_seconds: 5.0
+  # Signal weights used to build the fall confidence score (must sum to 1.0).
+  weights:
+    rapid_descent: 0.35
+    posture_change: 0.25
+    horizontal_state: 0.20
+    sustained_inactivity: 0.20
+
+decision:
+  # Confidence at or above which a fall is suspected.
+  suspect_threshold: 0.55
+  # Confidence at or above which the confirmation window opens.
+  confirm_threshold: 0.70
+  # Length of the cancel window, in seconds.
+  confirmation_seconds: 12.0
+  # Audio distress is an optional extension signal; see docs/limitations.md.
+  use_audio_signal: false
+  audio_distress_threshold: 0.80
+
+actions:
+  # Actions dispatched when an emergency is confirmed, in order.
+  on_emergency:
+    - LIGHTS_ON
+    - TV_SOS
+    - LOCAL_ALERT
+  # IR backend: "mock" (development, prints commands) or "device"
+  # ("device" requires a platform implementation - see docs/ir_integration.md).
+  ir_backend: mock
+
+appliances:
+  profile_dir: appliances/profiles
+  action_map:
+    LIGHTS_ON:
+      device: lights
+      command: "ON"
+    LIGHTS_OFF:
+      device: lights
+      command: "OFF"
+    TV_SOS:
+      device: tv
+      command: SOS
+    FAN_OFF:
+      device: fan
+      command: "OFF"
+
+voice:
+  # Confidence below which a parsed command is rejected as ambiguous.
+  min_intent_confidence: 0.6

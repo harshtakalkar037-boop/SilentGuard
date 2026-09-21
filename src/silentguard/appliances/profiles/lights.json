@@ -1,0 +1,10 @@
+{
+  "device": "lights",
+  "display_name": "Living room lights",
+  "protocol": "NEC",
+  "notes": "Command identifiers are placeholders. Real identifiers are captured per household during setup - see docs/ir_integration.md.",
+  "commands": {
+    "ON": {"code_id": "LIGHTS_NEC_ON", "description": "Turn the lights on"},
+    "OFF": {"code_id": "LIGHTS_NEC_OFF", "description": "Turn the lights off"}
+  }
+}

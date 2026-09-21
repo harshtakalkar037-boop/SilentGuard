@@ -1,0 +1,4 @@
+# Minimal install: everything except the camera/vision stack.
+# Enough to run the synthetic fall demo, the voice demo, the IR demo,
+# and the entire test suite.
+PyYAML>=6.0

@@ -1,0 +1,14 @@
+flowchart TD
+    A[Camera Input]
+    B[Pose Estimation]
+    C[Motion + Posture Analysis]
+    D[Fall Confidence]
+    E[10-15s Confirmation Window]
+    F{Cancelled?}
+    G[Emergency Confirmed]
+    H[IR / SOS / Local Alert]
+    I[Return to Safe State]
+
+    A --> B --> C --> D --> E --> F
+    F -- YES --> I
+    F -- NO --> G --> H

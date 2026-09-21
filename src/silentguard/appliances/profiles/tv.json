@@ -1,0 +1,13 @@
+{
+  "device": "tv",
+  "display_name": "Television",
+  "protocol": "NEC",
+  "notes": "SOS is a repeated power/backlight toggle used as a visual distress signal.",
+  "commands": {
+    "ON": {"code_id": "TV_NEC_POWER_ON", "description": "Turn the TV on"},
+    "OFF": {"code_id": "TV_NEC_POWER_OFF", "description": "Turn the TV off"},
+    "SOS": {"code_id": "TV_NEC_SOS_FLASH", "description": "Flash the screen as a distress signal", "repeat": 6},
+    "VOLUME_UP": {"code_id": "TV_NEC_VOL_UP", "description": "Increase volume"},
+    "VOLUME_DOWN": {"code_id": "TV_NEC_VOL_DOWN", "description": "Decrease volume"}
+  }
+}

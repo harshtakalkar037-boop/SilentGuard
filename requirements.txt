@@ -1,0 +1,14 @@
+# Core runtime.
+PyYAML>=6.0            # central configuration
+numpy>=1.24            # array maths used by the vision stack
+
+# Real pose input (camera or video). The synthetic pose source, the decision
+# engine, the action layer and the full test suite all run without these.
+opencv-python>=4.8     # video capture and colour conversion
+mediapipe>=0.10        # pose landmark estimation
+
+# Diagram and screenshot rendering (architecture/, screenshots/).
+Pillow>=10.0
+
+# Development only.
+pytest>=7.4

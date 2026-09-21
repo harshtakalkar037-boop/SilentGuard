@@ -1,0 +1,10 @@
+flowchart LR
+    A[Camera] --> B[Preprocessing]
+    M[Microphone] --> B
+    V[Voice / Gesture] --> B
+    B --> C[On-Device AI Inference]
+    C --> D[Decision Engine]
+    D --> E[Action Manager]
+    E --> F[IR Controller]
+    E --> G[Local Alert]
+    F --> H[Lights / TV / Fan]
