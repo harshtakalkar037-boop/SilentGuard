@@ -159,7 +159,7 @@ Detail: [`docs/ir_integration.md`](docs/ir_integration.md)
 ## Quickstart
 
 ```bash
-git clone <your-repo-url> SilentGuard
+git clone https://github.com/harshtakalkar037-boop/SilentGuard.git
 cd SilentGuard
 
 python -m venv .venv
@@ -407,11 +407,7 @@ Detail: [`docs/future_scope.md`](docs/future_scope.md)
 
 ## Team
 
-*Replace this section with your team details before submission.*
-
-| Name | Role |
-|---|---|
-| — | — |
+[PASTE ACTUAL TEAM MEMBERS + ROLES HERE]
 
 ## License
 
