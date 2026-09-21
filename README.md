@@ -407,7 +407,11 @@ Detail: [`docs/future_scope.md`](docs/future_scope.md)
 
 ## Team
 
-[PASTE ACTUAL TEAM MEMBERS + ROLES HERE]
+| Member | Role |
+|---|---|
+| Harsh Takalkar | Team Leader & ML Head |
+| Anuja Naik | AI/ML Engineer |
+| Anjali Jawale | Computer Vision & AI Engineer |
 
 ## License
 
