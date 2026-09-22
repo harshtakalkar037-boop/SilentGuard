@@ -419,8 +419,15 @@ MIT — see [`LICENSE`](LICENSE).
 
 ---
 
+---
+
 <div align="center">
 
-**SilentGuard — Safety That Doesn't Need a Signal.**
+# ⚡ SILENTGUARD × iQOO ⚡
 
-</div>
+### The Phone That Watches When No One Else Can.
+
+<br>
+
+<img src="https://img.shields.io/badge/iQOO-Edge%20AI-ff4d00?style=for-the-badge" />
+<img src="https://img.shields.io/badge/ON--DEVICE-AI-00c7
